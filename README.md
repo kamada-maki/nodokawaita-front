@@ -5,6 +5,8 @@
 ```bash
 $ git clone git@github.com:kamada-maki/nodokawaita-frontend.git
 $ docker-compose build
+$ mkdir app
+$ cd app
 $ docker-compose run --rm app npx create-next-app tmp --ts\
 && mv tmp/* . && mv tmp/.* . && rm -r tmp
 $ docker-compose up -d

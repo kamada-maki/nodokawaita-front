@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - .:/usr/src/app
+      - ./app:/usr/src/app
     ports:
       - "33000:3000"
     command: bash -c "npm run dev"
