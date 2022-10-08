@@ -1,5 +1,5 @@
 export const RecommendedRestaurants = () => {
-    return (<></>);
+    return <></>;
 };
 
 export default RecommendedRestaurants;

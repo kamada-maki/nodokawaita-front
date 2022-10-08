@@ -1,5 +1,5 @@
 export const RecommendedTags = () => {
-  return (<></>);
+  return <></>;
 };
 
 export default RecommendedTags;
