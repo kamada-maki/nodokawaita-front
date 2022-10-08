@@ -1,6 +1,6 @@
 
 export const Search = () => {
-  return (<></>);
+  return <></>;
 };
 
 export default Search;

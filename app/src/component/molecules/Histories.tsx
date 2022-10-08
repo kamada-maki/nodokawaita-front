@@ -1,9 +1,5 @@
 export const Histories = () => {
-  return (
-    <>
-    
-    </>
-  )
+  return <></>;
 };
 
 export default Histories;
