@@ -1,13 +1,20 @@
-// interface Props: {
-// }
 import Layout from "./layout";
 import Main from "component/organisms/Main";
-import SideBar from "component/organisms/SideBar";
+
+// interface Props: {
+// }
+
 export const Index = () => {
+  const memories = [
+    {
+      src:"./kama.jpg",
+      value:"思い出"
+    },
+  ]
+
   return (
     <Layout>
-      <Main />
-      <SideBar />
+      <Main memories={memories} />
     </Layout>
   );
 };
