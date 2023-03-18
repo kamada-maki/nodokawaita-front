@@ -2,8 +2,7 @@ import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import theme from "component/theme/theme";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useEffect } from "react";
 
 const App = ({ Component, pageProps }: AppProps) => {
   if (process.env.NODE_ENV === "development") {
@@ -14,6 +13,14 @@ const App = ({ Component, pageProps }: AppProps) => {
       const { worker } = require("../../mocks/browser");
       worker.start();
     }
+
+    useEffect(() => {
+      // Remove the server-side injected CSS.
+      const jssStyles = document.querySelector('#jss-server-side');
+      if (jssStyles) {
+        jssStyles?.parentElement?.removeChild(jssStyles);
+      }
+    }, []);
 
     return (
       <>
