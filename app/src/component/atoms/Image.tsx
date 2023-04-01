@@ -7,7 +7,7 @@ interface Props {
 export const Image = (props: Props) => {
   return (
     <Box>
-      <img src={props.src} />
+      <img style={{ width: "100%" }} src={props.src} />
     </Box>
   );
 };

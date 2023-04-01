@@ -1,21 +1,25 @@
 import { ReactNode } from "react";
 import {
   AppBar,
+  Box,
   Button,
+  Container,
   makeStyles,
   Toolbar,
   Typography,
 } from "@material-ui/core";
 
 interface Props {
-  children: ReactNode;
+  children: NonNullable<ReactNode>;
 }
 
 const useStyles = makeStyles(() => ({
-  root: {
+  header: {
     background: "#525E75",
     height: "48px",
     width: "100%",
+    display: "flex",
+    position: "relative",
   },
 }));
 
@@ -24,14 +28,16 @@ export const Layout = (props: Props) => {
 
   return (
     <>
-      <AppBar classes={{ root: classes.root }}>
+      <AppBar className={classes.header}>
         <Toolbar>
-          <Typography variant="h1">nodokawaita</Typography>
+          <Typography>nodokawaita</Typography>
           <Typography>クレームはこちら</Typography>
           <Button>記録する</Button>
         </Toolbar>
       </AppBar>
-      {props.children}
+      <Container>
+        <Box my={2}>{props.children}</Box>
+      </Container>
     </>
   );
 };

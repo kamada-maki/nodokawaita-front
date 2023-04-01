@@ -8,6 +8,7 @@ export const Text = (props: Props) => {
   return (
     <>
       <TextField
+        style={{ width: "100%" }}
         inputProps={{
           readOnly: true,
         }}

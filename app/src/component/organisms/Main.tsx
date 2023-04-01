@@ -1,21 +1,19 @@
-import { Box } from "@material-ui/core";
-import Memory from "component/molecules/Memory";
+import { Grid } from "@material-ui/core";
+import MemoryCard from "component/molecules/MemoryCard";
+import { Memory } from "component/templates";
 
 interface Props {
-  memories: {
-    src: string;
-    value: string;
-  }[];
+  memories: Memory[];
 }
 export const Main = (props: Props) => {
+  const memories = props.memories;
+
   return (
-    <Box>
-      {props.memories.map((memory) => {
-        return (
-          <Memory src={memory.src} value={memory.value} />
-        )
+    <Grid container spacing={3}>
+      {memories.map((memory, index) => {
+        return <MemoryCard key={index} memory={memory} />;
       })}
-    </Box>
+    </Grid>
   );
 };
 

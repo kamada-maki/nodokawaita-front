@@ -1,16 +1,52 @@
 import Layout from "./layout";
 import Main from "component/organisms/Main";
 
-// interface Props: {
-// }
+export interface Memory {
+  src: string;
+  members: string[];
+  restaurant: string;
+  date: string;
+}
 
 export const Index = () => {
-  const memories = [
+  const memories: Memory[] = [
     {
-      src:"./kama.jpg",
-      value:"思い出"
+      src: "kama.jpg",
+      members: ["sato", "kama","kitanosannnnn","ryuchan","yuihan","sacchan","yosssssy","iidasan"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
     },
-  ]
+    {
+      src: "kama.jpg",
+      members: ["sato", "kama"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
+    },
+    {
+      src: "kama.jpg",
+      members: ["sato", "kama"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
+    },
+    {
+      src: "kama.jpg",
+      members: ["sato", "kama"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
+    },
+    {
+      src: "kama.jpg",
+      members: ["sato", "kama"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
+    },
+    {
+      src: "kama.jpg",
+      members: ["sato", "kama"],
+      restaurant: "原価バー",
+      date: "2023/3/28",
+    },
+  ];
 
   return (
     <Layout>
